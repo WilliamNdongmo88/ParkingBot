@@ -1,0 +1,52 @@
+package com.marchant.model;
+
+import java.util.Date;
+
+public class Ticket {
+    private String amount;
+    private Vehicule vehicule;
+    private Date interingTime;
+    private Date existTime;
+
+    public String getAmount() {
+        return amount;
+    }
+
+    public void setAmount(String amount) {
+        this.amount = amount;
+    }
+
+    public Vehicule getVehicule() {
+        return vehicule;
+    }
+
+    public void setVehicule(Vehicule vehicule) {
+        this.vehicule = vehicule;
+    }
+
+    public Date getInteringTime() {
+        return interingTime;
+    }
+
+    public void setInteringTime(Date interingTime) {
+        this.interingTime = interingTime;
+    }
+
+    public Date getExistTime() {
+        return existTime;
+    }
+
+    public void setExistTime(Date existTime) {
+        this.existTime = existTime;
+    }
+
+    @Override
+    public String toString() {
+        return "Ticket{" +
+                "amount='" + amount + '\'' +
+                ", vehicule=" + vehicule +
+                ", interingTime=" + interingTime +
+                ", existTime=" + existTime +
+                '}';
+    }
+}
