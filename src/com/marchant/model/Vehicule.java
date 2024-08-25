@@ -2,7 +2,6 @@ package com.marchant.model;
 
 public class Vehicule {
     private String registrationNumber;
-    private  String category;
 
     public String getRegistrationNumber() {
         return registrationNumber;
@@ -12,19 +11,14 @@ public class Vehicule {
         this.registrationNumber = registrationNumber;
     }
 
-    public String getCategory() {
-        return category;
-    }
-
-    public void setCategory(String category) {
-        this.category = category;
+    public String getCategory(){
+        return "VEHICULE";
     }
 
     @Override
     public String toString() {
         return "Vehicule{" +
                 "registrationNumber='" + registrationNumber + '\'' +
-                ", category='" + category + '\'' +
                 '}';
     }
 }

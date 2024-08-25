@@ -42,11 +42,7 @@ public class Ticket {
 
     @Override
     public String toString() {
-        return "Ticket{" +
-                "amount='" + amount + '\'' +
-                ", vehicule=" + vehicule +
-                ", interingTime=" + interingTime +
-                ", existTime=" + existTime +
-                '}';
+        return "Le montant du ticket est "+ amount +" $ pour le véhicule de type "+ vehicule.getCategory() +" immatriculé "+
+                vehicule.getRegistrationNumber() + " entré le " + interingTime;
     }
 }
