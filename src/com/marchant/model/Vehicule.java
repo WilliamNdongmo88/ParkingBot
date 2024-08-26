@@ -11,8 +11,8 @@ public class Vehicule {
         this.registrationNumber = registrationNumber;
     }
 
-    public String getCategory(){
-        return "VEHICULE";
+    public VehiculeModelEnum getCategory(){
+        return VehiculeModelEnum.VEHICULE;
     }
 
     @Override

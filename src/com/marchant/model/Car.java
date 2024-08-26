@@ -2,7 +2,7 @@ package com.marchant.model;
 
 public class Car extends Vehicule{
     @Override
-    public String getCategory() {
-        return "CITADINE";
+    public VehiculeModelEnum getCategory() {
+        return VehiculeModelEnum.CITADINE;
     }
 }
