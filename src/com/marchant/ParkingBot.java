@@ -14,19 +14,22 @@ public class ParkingBot {
     }
 
     private static void ProcessVehicule() {
+        Ticket[] tabTicket = new Ticket[3];
         Vehicule vehicule = new Vehicule();
         vehicule.setRegistrationNumber("LS-458-P1");
-        Ticket ticket = parkingService.traiterVehiculeEntrant(vehicule);
-        System.out.println(ticket);
+        tabTicket[0] = parkingService.traiterVehiculeEntrant(vehicule);
 
         Vehicule voiture = new Car();
         voiture.setRegistrationNumber("LT-879-P2");
-        Ticket ticketVoiture = parkingService.traiterVehiculeEntrant(voiture);
-        System.out.println(ticketVoiture);
+        tabTicket[1] = parkingService.traiterVehiculeEntrant(voiture);
 
         Vehicule threecycle = new Bicycle();
         threecycle.setRegistrationNumber("OU-589-P3");
-        Ticket ticketThreecycle = parkingService.traiterVehiculeEntrant(threecycle);
-        System.out.println(ticketThreecycle);
+        tabTicket[2] = parkingService.traiterVehiculeEntrant(threecycle);
+
+        System.out.println("Triatement des sorties par lot");
+        for (int i = 0; i < tabTicket.length; i++) {
+            System.out.println(parkingService.traiterVehiculeEntrant(tabTicket[i].getVehicule()));
+        }
     }
 }
