@@ -3,16 +3,16 @@ package com.marchant.model;
 import java.util.Date;
 
 public class Ticket {
-    private String amount;
+    private double amount;
     private Vehicule vehicule;
     private Date interingTime;
     private Date existTime;
 
-    public String getAmount() {
+    public double getAmount() {
         return amount;
     }
 
-    public void setAmount(String amount) {
+    public void setAmount(double amount) {
         this.amount = amount;
     }
 
@@ -43,6 +43,6 @@ public class Ticket {
     @Override
     public String toString() {
         return "Le montant du ticket est "+ amount +" $ pour le véhicule de type "+ vehicule.getCategory() +" immatriculé "+
-                vehicule.getRegistrationNumber() + " entré le " + interingTime;
+                vehicule.getRegistrationNumber() + " entré le " + interingTime + " et sorti le "+ existTime;
     }
 }
