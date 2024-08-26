@@ -17,19 +17,16 @@ public class ParkingBot {
         Vehicule vehicule = new Vehicule();
         vehicule.setRegistrationNumber("LS-458-P1");
         Ticket ticket = parkingService.traiterVehiculeEntrant(vehicule);
-        ticket.setAmount("25");
         System.out.println(ticket);
 
         Vehicule voiture = new Car();
         voiture.setRegistrationNumber("LT-879-P2");
         Ticket ticketVoiture = parkingService.traiterVehiculeEntrant(voiture);
-        ticketVoiture.setAmount("35");
         System.out.println(ticketVoiture);
 
         Vehicule threecycle = new Bicycle();
         threecycle.setRegistrationNumber("OU-589-P3");
         Ticket ticketThreecycle = parkingService.traiterVehiculeEntrant(threecycle);
-        ticketThreecycle.setAmount("15");
         System.out.println(ticketThreecycle);
     }
 }
